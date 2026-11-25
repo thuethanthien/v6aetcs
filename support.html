@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hỗ trợ – V6 For aeTCS</title>
+<style>
+  :root { --ink:#1d2433; --muted:#5d6678; --line:#dfe3ea; --brand:#2563c9; --soft:#f4f6fa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.65 system-ui,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:#fff; }
+  header { background:var(--brand); color:#fff; padding:22px 18px; }
+  header .in, main, footer { max-width:780px; margin:0 auto; padding:0 18px; }
+  header .in { padding:0; }
+  header h1 { margin:0 0 4px; font-size:26px; } header p { margin:0; opacity:.92; }
+  nav { background:var(--soft); border-bottom:1px solid var(--line); }
+  nav .in { max-width:780px; margin:0 auto; padding:10px 18px; display:flex; gap:18px; flex-wrap:wrap; }
+  nav a { color:var(--brand); text-decoration:none; font-weight:600; }
+  main { padding-top:8px; padding-bottom:30px; }
+  h2 { font-size:20px; margin-top:30px; } h3 { font-size:17px; margin-top:22px; }
+  li { margin:5px 0; }
+  .card { background:var(--soft); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:14px 0; }
+  .note { background:#fff8e1; border:1px solid #f0d78c; border-radius:10px; padding:12px 16px; margin:16px 0; }
+  table { border-collapse:collapse; width:100%; } td, th { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:var(--soft); }
+  footer { color:var(--muted); font-size:14px; padding-bottom:30px; }
+  a { color:var(--brand); }
+</style>
+</head>
+<body>
+<header><div class="in"><h1>V6 For aeTCS</h1><p>Hướng dẫn kích hoạt và xử lý lỗi</p></div></header>
+<nav><div class="in"><a href="index.html">Giới thiệu</a><a href="support.html">Hỗ trợ</a><a href="privacy-policy.html">Chính sách quyền riêng tư</a></div></nav>
+<main>
+
+<h2>Liên hệ hỗ trợ</h2>
+<div class="card"><p>Email: <a href="mailto:contact4work.tms@gmail.com">contact4work.tms@gmail.com</a></p>
+<p>Khi cần hỗ trợ, hãy gửi kèm <b>tên đăng nhập</b> (hiện ở mục "Tài khoản" trong bảng bên) và mô tả lỗi hoặc ảnh chụp màn hình. Che mã số thuế và tên người nộp thuế trong ảnh.</p></div>
+
+<h2>Cách nhận và nhập key kích hoạt</h2>
+<ol>
+  <li>Mở trang vanbandientu.gdt.gov.vn, đăng nhập, bấm biểu tượng tiện ích để mở bảng bên.</li>
+  <li>Ở mục <b>Nhập hàng loạt từ Excel</b>, xem dòng <b>Tài khoản</b> (tên đăng nhập của bạn).</li>
+  <li>Bấm <b>★ Mua key</b>, quét mã QR và chuyển khoản theo giá hiển thị.</li>
+  <li>Gửi email đến <a href="mailto:contact4work.tms@gmail.com">contact4work.tms@gmail.com</a> với nội dung là <b>tên user</b> và <b>ảnh chuyển khoản thành công</b>.</li>
+  <li>Nhận key, dán vào ô <b>Nhập key kích hoạt</b> rồi bấm <b>Kích hoạt</b>. Thấy dòng "Đã kích hoạt đến …" là xong.</li>
+</ol>
+<p>Key chỉ dùng được cho đúng tên đăng nhập đã đăng ký. Sau khi hết hạn, liên hệ để gia hạn, không cần cài lại.</p>
+
+<h2>Cách dùng nhập hàng loạt</h2>
+<ol>
+  <li>Chọn <b>Nhập theo file Excel</b> (hoặc dán 2 cột từ Excel). Cột có mã số thuế 9 đến 14 chữ số, tên người nộp thuế nằm bên cạnh.</li>
+  <li>Trong ô <b>Trích yếu</b> ở trên, viết <b>{MST}</b> và <b>{TEN}</b> để chèn dữ liệu từng dòng.</li>
+  <li>Bấm <b>Chạy tiếp</b>: tiện ích mở biểu mẫu mới và điền một dòng. Bạn đính kèm tệp, kiểm tra rồi tự bấm Ghi lại.</li>
+  <li>Bấm <b>Chạy tiếp</b> lần nữa để làm dòng kế tiếp. Tiện ích nhớ dòng đã chạy kể cả khi bạn đóng bảng bên.</li>
+</ol>
+
+<h2>Lỗi thường gặp</h2>
+<table>
+  <tr><th>Thông báo</th><th>Cách xử lý</th></tr>
+  <tr><td>Chưa xác định tài khoản</td><td>Mở trang vanbandientu.gdt.gov.vn, đăng nhập, bấm F5, rồi bấm nút ↻ trong bảng bên.</td></tr>
+  <tr><td>Chưa kết nối trang</td><td>Mở đúng trang Văn bản điện tử và bấm F5.</td></tr>
+  <tr><td>Tài khoản chưa được đăng ký</td><td>Gửi tên đăng nhập hiện ở mục "Tài khoản" cho nhà phát triển để được cấp key.</td></tr>
+  <tr><td>Key không đúng</td><td>Dán lại đủ key; hệ thống bỏ qua dấu gạch và chữ hoa thường.</td></tr>
+  <tr><td>Giấy phép đã hết hạn / bị thu hồi</td><td>Liên hệ qua email để gia hạn.</td></tr>
+  <tr><td>Không kết nối được máy chủ cấp phép</td><td>Kiểm tra mạng có chặn script.google.com không; thử lại sau.</td></tr>
+  <tr><td>Không thấy mã số thuế trong file Excel</td><td>Kiểm tra cột mã số thuế có 9 đến 14 chữ số (có thể kèm "-" và số chi nhánh); mở bảng bên xem dòng "Đã đọc" để biết file có gì.</td></tr>
+</table>
+
+</main>
+<footer>
+<p>V6 For aeTCS là công cụ độc lập của nhà phát triển, không phải sản phẩm của cơ quan thuế hay đơn vị vận hành hệ thống Văn bản điện tử.<br>
+Liên hệ: <a href="mailto:contact4work.tms@gmail.com">contact4work.tms@gmail.com</a></p>
+</footer>
+</body>
+</html>

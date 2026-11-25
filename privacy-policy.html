@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư – V6 For aeTCS</title>
+<style>
+  :root { --ink:#1d2433; --muted:#5d6678; --line:#dfe3ea; --brand:#2563c9; --soft:#f4f6fa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.65 system-ui,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:#fff; }
+  header { background:var(--brand); color:#fff; padding:22px 18px; }
+  header .in, main, footer { max-width:780px; margin:0 auto; padding:0 18px; }
+  header .in { padding:0; }
+  header h1 { margin:0 0 4px; font-size:26px; } header p { margin:0; opacity:.92; }
+  nav { background:var(--soft); border-bottom:1px solid var(--line); }
+  nav .in { max-width:780px; margin:0 auto; padding:10px 18px; display:flex; gap:18px; flex-wrap:wrap; }
+  nav a { color:var(--brand); text-decoration:none; font-weight:600; }
+  main { padding-top:8px; padding-bottom:30px; }
+  h2 { font-size:20px; margin-top:30px; } h3 { font-size:17px; margin-top:22px; }
+  li { margin:5px 0; }
+  .card { background:var(--soft); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:14px 0; }
+  .note { background:#fff8e1; border:1px solid #f0d78c; border-radius:10px; padding:12px 16px; margin:16px 0; }
+  table { border-collapse:collapse; width:100%; } td, th { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:var(--soft); }
+  footer { color:var(--muted); font-size:14px; padding-bottom:30px; }
+  a { color:var(--brand); }
+</style>
+</head>
+<body>
+<header><div class="in"><h1>V6 For aeTCS</h1><p>Chính sách quyền riêng tư</p></div></header>
+<nav><div class="in"><a href="index.html">Giới thiệu</a><a href="support.html">Hỗ trợ</a><a href="privacy-policy.html">Chính sách quyền riêng tư</a></div></nav>
+<main>
+
+
+<p>Cập nhật lần cuối: <b>25/11/2026</b> · Nhà phát triển: <b>[thuethanthien]</b> · Liên hệ: <b>contact4work.tms@gmail.com</b></p>
+<p class="note">V6 For aeTCS là công cụ độc lập của nhà phát triển, <b>không phải sản phẩm của cơ quan thuế</b> hay đơn vị vận hành hệ thống Văn bản điện tử.</p>
+
+<h2>1. Extension làm gì</h2>
+<p>Extension hỗ trợ người dùng lập tờ trình và văn bản đi trên hệ thống Văn bản điện tử (vanbandientu.gdt.gov.vn): điền nhanh biểu mẫu theo mẫu do người dùng chọn và nhập từng dòng dữ liệu từ file Excel. Extension chỉ hoạt động trên trang này.</p>
+
+<h2>2. Dữ liệu được xử lý trên máy của bạn</h2>
+<ul>
+  <li><b>Nội dung biểu mẫu và các danh sách trên trang</b> (người ký, đơn vị nhận, loại văn bản, nhóm và loại hồ sơ…): được đọc để hiển thị trong bảng bên và điền vào biểu mẫu theo lựa chọn của bạn.</li>
+  <li><b>Phiên đăng nhập của trang</b> (token mà hệ thống lưu trong trình duyệt): chỉ được đọc trên máy bạn để (a) gọi giao diện lập trình của chính hệ thống (vanbandientuapi.gdt.gov.vn) thay cho bạn, giống cách trang vẫn làm, và (b) xác định tên đăng nhập để kiểm tra giấy phép. Token <b>không</b> được gửi cho nhà phát triển hay bên thứ ba nào.</li>
+  <li><b>Dữ liệu bạn nhập:</b> mẫu đang soạn, file Excel hoặc dữ liệu dán (mã số thuế, tên người nộp thuế) và tiến độ đã chạy. Dữ liệu này được xử lý và lưu <b>cục bộ</b> trong bộ nhớ của extension (chrome.storage) để nhớ tiến độ. Bạn xóa bằng nút "Xóa tệp", "Xóa dữ liệu" hoặc bằng cách gỡ extension.</li>
+</ul>
+
+<h2>3. Dữ liệu gửi đến nhà phát triển</h2>
+<p>Chỉ khi kích hoạt hoặc kiểm tra giấy phép cho tính năng nhập hàng loạt, extension gửi tới máy chủ cấp phép của nhà phát triển (Google Apps Script / Google Sheets):</p>
+<ul>
+  <li>tên đăng nhập của bạn trên hệ thống,</li>
+  <li>key kích hoạt bạn nhập,</li>
+  <li>số phiên bản của extension.</li>
+</ul>
+<p>Extension <b>không gửi</b> mã số thuế, tên người nộp thuế, nội dung văn bản, token đăng nhập hay bất kỳ dữ liệu nào khác. Như mọi dịch vụ web, nhà cung cấp hạ tầng (Google) có thể ghi nhận địa chỉ IP của kết nối.</p>
+
+<h2>4. Máy chủ lưu gì và dùng để làm gì</h2>
+<p>Bảng giấy phép lưu: tên đăng nhập, họ tên và đơn vị (do nhà phát triển nhập), key, ngày cấp, ngày hết hạn, trạng thái, thời điểm kiểm tra gần nhất và số lần kiểm tra. Dữ liệu chỉ dùng để quản lý giấy phép, hỗ trợ và thu hồi khi cần. Bạn có thể yêu cầu xóa bản ghi của mình qua email liên hệ ở trên.</p>
+
+<h2>4.1. Khi bạn mua key kích hoạt</h2>
+<p>Để nhận key, bạn tự gửi email cho nhà phát triển (contact4work.tms@gmail.com) kèm tên đăng nhập và ảnh chụp chuyển khoản thành công. Ảnh này có thể chứa họ tên và số tài khoản của bạn. Nhà phát triển chỉ dùng để xác nhận thanh toán, cấp key và hỗ trợ; không chia sẻ cho bên thứ ba và chỉ lưu trong thời gian cần thiết để đối soát, trừ khi pháp luật yêu cầu lưu lâu hơn. Extension không thu thập hay xử lý thanh toán: việc chuyển khoản diễn ra ngoài extension, qua ngân hàng của bạn.</p>
+
+<h2>5. Cam kết</h2>
+<ul>
+  <li>Không bán, cho thuê hay chia sẻ dữ liệu người dùng cho bên thứ ba.</li>
+  <li>Không dùng dữ liệu cho quảng cáo, đánh giá tín dụng hay mục đích không liên quan đến chức năng nêu trên.</li>
+  <li>Không theo dõi hành vi, không dùng công cụ phân tích.</li>
+  <li>Không tải hay chạy mã từ nguồn bên ngoài extension.</li>
+</ul>
+
+<h2>6. Quyền của bạn</h2>
+<p>Gỡ extension sẽ xóa toàn bộ dữ liệu lưu trên máy. Bạn có thể liên hệ để hỏi về hoặc yêu cầu xóa dữ liệu giấy phép của mình.</p>
+
+<h2>7. Thay đổi chính sách</h2>
+<p>Khi có thay đổi, trang này được cập nhật cùng ngày cập nhật ở đầu trang.</p>
+
+</main>
+<footer>
+<p>V6 For aeTCS là công cụ độc lập của nhà phát triển, không phải sản phẩm của cơ quan thuế hay đơn vị vận hành hệ thống Văn bản điện tử.<br>
+Liên hệ: <a href="mailto:contact4work.tms@gmail.com">contact4work.tms@gmail.com</a></p>
+</footer>
+</body>
+</html>
